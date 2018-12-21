@@ -50,7 +50,7 @@ body {
 .dang_nhap{
   margin-bottom: 15px;
 }
-.dang_nhap input[type=text]{
+.dang_nhap input{
   width: 300px;
   height: 50px;
   text-align: center;
@@ -251,7 +251,7 @@ p a:hover {
   font-size: 16px;
   font-weight: 400;
   line-height: 45px;
-  margin: 0 auto 2em;
+  margin: 15px 15px 15px 15px;
   max-width: 160px;
   position: relative;
   text-decoration: none;
@@ -447,15 +447,8 @@ p a:hover {
 .dang_nhap{
   margin-bottom: 15px;
 }
-.dang_nhap input[type=text]{
-  width: 300px;
-  height: 50px;
-  text-align: center;
-  border: 2px solid;
-  border-radius: 25px;
-  font-family: 'Ubuntu';
-  font-size: 15px;
-}
+
+
 .nut{
   font-family: 'Ubuntu';
   height: 50px;
@@ -464,6 +457,10 @@ p a:hover {
   font-size: 70%;
   border: 2px solid;
   border-radius: 25px;
+  border-color: white;
+}
+.nut text{
+  size: 50px;
 }
 h3 {
   color: #fff;
@@ -477,4 +474,10 @@ h3 {
 }
 body{
   background-image: url(https://1.bp.blogspot.com/-7GmamCLkR1Q/Uq1UhwDaY6I/AAAAAAAAB2I/UPL0jR74Djk/s1600/hinh-nen-giang-sinh-noel-2.jpg)
+}
+.btn{
+  margin: 15px 15px 15px 15px;
+}
+#setnamewarning{
+  fl
 }
