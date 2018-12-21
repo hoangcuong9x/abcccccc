@@ -28,7 +28,7 @@ body {
 #wrong{
   margin-bottom: 30px;
   padding: 2px;
-  color: white;
+  color: red;
   font-size: 70%;
 }
 #login{
@@ -460,7 +460,7 @@ p a:hover {
   font-family: 'Ubuntu';
   height: 50px;
   width: 200px;
-  background: red;
+  background: none;
   font-size: 70%;
   border: 2px solid;
   border-radius: 25px;
@@ -474,4 +474,7 @@ h3 {
   h3 {
     margin: 0 0 1em;
   }
+}
+body{
+  background-image: url(https://1.bp.blogspot.com/-7GmamCLkR1Q/Uq1UhwDaY6I/AAAAAAAAB2I/UPL0jR74Djk/s1600/hinh-nen-giang-sinh-noel-2.jpg)
 }
