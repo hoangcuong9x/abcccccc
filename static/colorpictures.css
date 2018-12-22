@@ -53,15 +53,6 @@ body {
   font-size: 18px;
   color: red;
 }
-.nut{
-  font-family: 'Ubuntu';
-  height: 50px;
-  width: 200px;
-  background: #ffffff;
-  font-size: 70%;
-  border: 2px solid;
-  border-radius: 25px;
-}
 .pic{
   font-family: 'Ubuntu';
   height: 200px;
@@ -71,16 +62,6 @@ body {
   border: 2px solid;
   border-radius: 25px;
 }
-.cong_cu{
-  font-family: 'Ubuntu';
-  height: 30px;
-  width: 150px;
-  background: rgb(42, 165, 48);
-  font-size: 70%;
-  border: 2px solid;
-  border-radius: 25px;
-}
-
 .buttons {
   display: table;
   height: 100%;
@@ -172,6 +153,10 @@ p a:hover {
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 @media (min-width: 400px) {
   .btn {
