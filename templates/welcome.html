@@ -9,19 +9,22 @@
     <title>Color Pictures</title>
 </head>
 <body>
+        <p style="display:none">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3CWJNqyub3o?rel=0&amp;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Start Coloring</a>
             
             {% if 'token' in session %}
-                <a href="{{ url_for('logout') }}" class="btn btn-5">Log out</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
             {% endif %}
                 <div id="tieu_de">
                     <h1>Xin chào {{ fullname }}!</h1>
                 </div> 
                 <div>
-                    <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-5">My Arts</a>
+                    <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-1">My Arts</a>
                 </div>     
             </div> 
         </div>

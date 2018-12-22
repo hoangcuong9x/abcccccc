@@ -11,9 +11,9 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
-            <a href="{{ url_for('login') }}" class="btn btn-5">Log in</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Start Coloring</a>
+            <a href="{{ url_for('login') }}" class="btn btn-3">Log in</a>
                 <div id="tieu_de">
                     <h1>Sign up</h1>
                     <p id='wrong'>{{ warning }}</p>
@@ -23,7 +23,7 @@
                         <input type="text" placeholder="fullname" name="fullname">
                     </div>
                     <div class="dang_nhap">
-                        <input type="text" placeholder="username (không chứa dấu cách)" name="username">
+                        <input type="text" color="red" placeholder="username (không chứa dấu cách)" name="username">
                     </div>
                     <div class="dang_nhap">
                         <input type="password" placeholder="password (không chứa dấu cách)" name='password'>
@@ -32,7 +32,7 @@
                         <input type="text" placeholder="email" name='email'>
                     </div> -->
                     <div>
-                        <button class="nut">Sign up</button>
+                        <button class="btn btn-1">Sign up</button>
                     </div>
                 </form>     
             </div>

@@ -11,14 +11,14 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
             
             {% if 'token' in session %}
-                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-5">My Arts</a>
-                <a href="{{ url_for('logout') }}" class="btn btn-5">Log out</a>
+                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">My Arts</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
             {% else %}
-                <a href="{{ url_for('login') }}" class="btn btn-5">Log in</a>
-                <a href="{{ url_for('signup') }}" class="btn btn-5">Sign up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-3">Log in</a>
+                <a href="{{ url_for('signup') }}" class="btn btn-3">Sign up</a>
             {% endif %}
 
             <div>
@@ -27,13 +27,13 @@
                     <p>-A colorfull world in your hand-</p>
                 </div>
                 <div id="bat_dau">
-                    <a href="{{ url_for('full_category') }}" class="btn btn-5">Start</a>
+                    <a href="{{ url_for('full_category') }}" class="btn btn-1">Start</a>
                 </div>
                 <div id="top100">
-                    <a href="{{ url_for('top100pics') }}" class="btn btn-5">Top 100 Pictures</a>
-                    <a href="{{ url_for('top100artists') }}" class="btn btn-5">Top 100 Artists</a>
+                    <a href="{{ url_for('top100pics') }}" class="btn btn-1">Top 100 Pictures</a>
+                    <a href="{{ url_for('top100artists') }}" class="btn btn-1">Top 100 Artists</a>
                 </div>
-                <a href="{{ url_for('roomoffame') }}" class="btn btn-5">Room of Fame</a>
+                <a href="{{ url_for('roomoffame') }}" class="btn btn-1">Room of Fame</a>
                 <!-- <div class="tim_kiem">
                     <input type="text" placeholder="Search pic/artist">
                 </div> -->

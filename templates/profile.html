@@ -11,49 +11,49 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Start Coloring</a>
 
             {% if 'token' in session %}
-                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-5">My Arts</a>
-                <a href="{{ url_for('logout') }}" class="btn btn-5">Log out</a>
+                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">My Arts</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
             {% else %}
-                <a href="{{ url_for('login') }}" class="btn btn-5">Log in</a>
-                <a href="{{ url_for('signup') }}" class="btn btn-5">Sign up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-3">Log in</a>
+                <a href="{{ url_for('signup') }}" class="btn btn-3">Sign up</a>
             {% endif %}
             
-            <h1>{{ artist_infor.fullname }}</h1>
+            <h2 style="font-size:45px; color:white">{{ artist_infor.fullname }}</h2>
             <hr>
-            <div>Finished Arts: {{ artist_infor.finished_arts }}</div>
-            <div>Like: {{ artist_infor.totallikes }}</div>
+            <div style="font-size:22px">Finished Arts: {{ artist_infor.finished_arts }}</div>
+            <div style="font-size:22px">Like: {{ artist_infor.totallikes }}</div>
             <hr>
             
             {% for pic in artist_finised_arts %}
-                <p>{{ pic.picname }}</p>
+                <p style="font-size:22px">{{ pic.picname }}</p>
                 <a href="{{ url_for('view', picid=pic.picid) }}">
                     <img src="{{ pic.piclink }}" alt="" width="20%" height="20%">
                 </a>
-                <p>Like: {{ pic.piclikes }}, Comment: {{ pic.piccomments }}</p>
+                <p style="font-size:22px">Like: {{ pic.piclikes }}, Comment: {{ pic.piccomments }}</p>
                 <hr>
             {% endfor %}
             
             {% if working_list != [] %}
-                <h1>Working arts</h1>
+                <h2 style="font-size:45px; color:white">Working arts</h2>
                 <hr>
-                <div>Working Arts: {{ artist_infor.working_arts }}</div>
+                <div style="font-size:22px">Working Arts: {{ artist_infor.working_arts }}</div>
                 <hr>
                 {% for pic in working_list %}
-                    <p>{{ pic.picname }}</p>
+                    <p style="font-size:22px">{{ pic.picname }}</p>
                     <div>
                         <a href="{{ url_for('keep_continue', picid=pic.id) }}">
                             <img src="{{ pic.piclink }}" alt="" width="20%" height="20%">
                         </a>
                     </div>
-                    <a href="{{ url_for('keep_continue', picid=pic.id) }}">Continue</a>
-                    <button class="btn btn-5">Finish</button>
+                    <a href="{{ url_for('keep_continue', picid=pic.id) }}" style="font-size:22px">Continue</a>
+                    <button class="btn btn-1">Finish</button>
                     <hr>
                 {% endfor %}
-                <a href="{{ url_for('full_category') }}" class="btn btn-5">Start new art</a>
+                <a href="{{ url_for('full_category') }}" class="btn btn-3">Start new art</a>
             {% endif %}
         </div>
     </section>

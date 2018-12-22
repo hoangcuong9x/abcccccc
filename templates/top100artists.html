@@ -16,9 +16,9 @@
             <a href="{{ url_for('roomoffame') }}" class="btn btn-5">Room of Fame</a>
             <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
             
-            <h1>Top 100 Artists</h1>
+            <h1 style="color:white">Top 100 Artists</h1>
             <hr>
-            <p>{{ notice }}</p>
+            <p style="color:white">{{ notice }}</p>
 
             {% for artist in top100artists %}
             <div>

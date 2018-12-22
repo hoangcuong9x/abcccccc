@@ -11,18 +11,18 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('top100pics') }}" class="btn btn-5">Top 100 Pics</a>
-            <a href="{{ url_for('top100artists') }}" class="btn btn-5">Top 100 Artists</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('top100pics') }}" class="btn btn-3">Top 100 Pics</a>
+            <a href="{{ url_for('top100artists') }}" class="btn btn-3">Top 100 Artists</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Start Coloring</a>
 
-            <h1>Room of Fame</h1>
+            <h1 style="color:white">Room of Fame</h1>
             <hr>
             <p>{{ notice }}</p>
 
             {% for pic in piclist %}
             <div>
-                <h1>{{ pic.picname }}</h1>
+                <h2 style="font-size: 40px;">{{ pic.picname }}</h2>
                 <div>
                     <a href="{{ url_for('view', picid=pic.id) }}">
                         <img src="{{ pic.piclink }}" alt="" width="20%" height="20%">

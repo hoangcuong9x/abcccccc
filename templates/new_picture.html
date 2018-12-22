@@ -12,15 +12,15 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Category</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Category</a>
 
             {% if 'token' in session %}
-                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-5">My Arts</a>
-                <a href="{{ url_for('logout') }}" class="btn btn-5">Log out</a>
+                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">My Arts</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
             {% else %}
-                <a href="{{ url_for('login') }}" class="btn btn-5">Log in</a>
-                <a href="{{ url_for('signup') }}" class="btn btn-5">Sign up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-3">Log in</a>
+                <a href="{{ url_for('signup') }}" class="btn btn-3">Sign up</a>
             {% endif %}
             
             <hr>
@@ -30,15 +30,15 @@
                 {% if aftersave == 'no' %}
                 <div style="justify-content: center">
                     <div>
-                        <span>Pick your color here: </span>
+                        <span style="color: white">Pick your color here: </span>
                         <input id="colorPicker" type="color" name="favcolor" value="#ff0000">
                     </div>
-                    <div><button onclick="clearCanvas()" class="nut" id="resetcanvas">Reset</button></div>
+                    <div><button onclick="clearCanvas()" class="btn btn-1" id="resetcanvas">Reset</button></div>
                     <div>
-                        <button class="nut" onclick="displayForm()">Save</button>
+                        <button class="btn btn-1" onclick="displayForm()">Save</button>
                         <div style="display:none" id="loginwarning">
-                            <p style="color:red">Bạn chưa đăng nhập!</p>
-                            <button class="nut"><a href="{{ url_for('login') }}" target="_blank">Log in</a></button>
+                            <span class="thong_bao">Bạn chưa đăng nhập!</span>
+                            <a href="{{ url_for('login') }}" class="btn btn-1" target="_blank">Log in</a></button>
                         </div>
                         <form style="display:none" action="" method="post" id="submitform">
                             <div><label for="">Name your art:</label></div>
@@ -46,8 +46,8 @@
                             <input style="display:none" type="text" id="inputlink" name="piclink">
                             <input style="display:none" type="text" id="inputpicstatus" name="picstatus">
                             <input style="display:none" type="text" id="inputpicartist" name="picartist">
-                            <div><button id="saveworking" class="nut" type="button" onclick="saveWorking()">Save as Working Art</button></div>
-                            <div><button id="savefinished" class="nut" type="button" onclick="saveFinished()">Save as Finished Art</button></div>
+                            <div><button id="saveworking" class="btn btn-1" type="button" onclick="saveWorking()">Save as Working Art</button></div>
+                            <div><button id="savefinished" class="btn btn-1" type="button" onclick="saveFinished()">Save as Finished Art</button></div>
                             <p id="setnamewarning" style="display:none; color:red">Bạn chưa đặt tên!</p>
                         </form>
                     </div>
@@ -55,8 +55,8 @@
                 {% elif aftersave == 'yes' %}
                 <div>
                     <p>Saved art successfull!</p>
-                    <button class="nut"><a href="{{ url_for('profile', artist=session['token']) }}">Go to My Arts</a></button>
-                    <button class="nut"><a href="{{ url_for('full_category') }}">Start New</a></button>
+                    <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-2">Go to my Arts</a>
+                    <a href="{{ url_for('full_category') }}" class="btn btn-2">Start New</a>
                 </div>
                 {% endif %}
             </div>

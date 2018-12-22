@@ -10,39 +10,43 @@
     <title>New Pictures</title>
 </head>
 <body>
-    <button class="nut"><a href="{{ url_for('home') }}">Homepage</a></button>
-    <button class="nut"><a href="{{ url_for('full_category') }}">Category</a></button>
-    <button class="nut"><a href="{{ url_for('profile', artist=session['token']) }}">My Arts</a></button>
-    <button class="nut"><a href="{{ url_for('logout') }}">Log out</a></button>
-    
-    <hr>
+    <section class="buttons">
+        <div class="container">
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Category</a>
+            <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">My Arts</a>
+            <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
+            
+            <hr>
 
-    <div style="display: flex; justify-content: space-around">
-        <div><canvas id="canvas" width="567" height="794"></canvas></div>
-        {% if aftersave == 'no' %}
-        <div>
-            <div>
-                <span>Pick your color here: </span>
-                <input id="colorPicker" type="color" name="favcolor" value="#ff0000">
-            </div>
-            <div><button onclick="clearCanvas()" class="nut" id="resetcanvas">Reset</button></div>
-            <div>
-                <form action="" method="post" id="submitform">
-                    <input style="display:none" type="text" id="inputlink" name="piclink">
-                    <input style="display:none" type="text" id="inputpicstatus" name="picstatus">
-                    <div><button id="saveworking" class="nut" type="button" onclick="saveWorking()">Save</button></div>
-                    <div><button id="savefinished" class="nut" type="button" onclick="saveFinished()">Finish Art</button></div>
-                </form>
+            <div style="display: flex; justify-content: space-around">
+                <div><canvas id="canvas" width="567" height="794"></canvas></div>
+                {% if aftersave == 'no' %}
+                <div>
+                    <div>
+                        <span style="color:white">Pick your color here: </span>
+                        <input id="colorPicker" type="color" name="favcolor" value="#ff0000">
+                    </div>
+                    <div><button onclick="clearCanvas()" class="btn btn-1" id="resetcanvas">Reset</button></div>
+                    <div>
+                        <form action="" method="post" id="submitform">
+                            <input style="display:none" type="text" id="inputlink" name="piclink">
+                            <input style="display:none" type="text" id="inputpicstatus" name="picstatus">
+                            <div><button id="saveworking" class="btn btn-1" type="button" onclick="saveWorking()">Save</button></div>
+                            <div><button id="savefinished" class="btn btn-1" type="button" onclick="saveFinished()">Finish Art</button></div>
+                        </form>
+                    </div>
+                </div>
+                {% elif aftersave == 'yes' %}
+                <div>
+                    <p>Saved art successfull!</p>
+                    <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">Go to My Arts</a>
+                    <a href="{{ url_for('full_category') }}" class="btn btn-3">Start New</a>
+                </div>
+                {% endif %}
             </div>
         </div>
-        {% elif aftersave == 'yes' %}
-        <div>
-            <p>Saved art successfull!</p>
-            <button class="nut"><a href="{{ url_for('profile', artist=session['token']) }}">Go to My Arts</a></button>
-            <button class="nut"><a href="{{ url_for('full_category') }}">Start New</a></button>
-        </div>
-        {% endif %}
-    </div>
+    </section>
 
     <input id="token" style="display:none" type="text" value="{{ token }}">
     <input id="linkB64" style="display:none" type="text" value="{{ piclinkb64 }}">

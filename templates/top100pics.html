@@ -15,12 +15,12 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('roomoffame') }}" class="btn btn-5">Room of Fame</a>
-            <a href="{{ url_for('top100artists') }}" class="btn btn-5">Top 100 Artists</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Start Coloring</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('roomoffame') }}" class="btn btn-3">Room of Fame</a>
+            <a href="{{ url_for('top100artists') }}" class="btn btn-3">Top 100 Artists</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Start Coloring</a>
             
-            <h3>Top 100 Pictures</h3>
+            <h1 style="color:white">Top 100 Pictures</h1>
             <hr>
             <p>{{ notice }}</p>
             
@@ -35,9 +35,9 @@
                                 <img src="{{ pic.piclink }}" alt="" width="20%" height="20%">
                             </a>
                         </div>
-                        <span>Artist:</span>
+                        <span style="color:white">Artist:</span>
                         <span><a href="{{ url_for('profile', artist=pic.picartist) }}"> {{ pic.picartistfullname }}</a></span>
-                        <span>Like: {{ pic.piclikes }}</span>
+                        <span style="color:white">Like: {{ pic.piclikes }}</span>
                         <hr>
                     </div>
                     {% endfor %}

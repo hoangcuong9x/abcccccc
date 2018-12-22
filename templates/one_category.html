@@ -11,15 +11,15 @@
 <body>
     <section class="buttons">
         <div class="container">
-            <a href="{{ url_for('home') }}" class="btn btn-5">Homepage</a>
-            <a href="{{ url_for('full_category') }}" class="btn btn-5">Category</a>
+            <a href="{{ url_for('home') }}" class="btn btn-3">Homepage</a>
+            <a href="{{ url_for('full_category') }}" class="btn btn-3">Category</a>
             
             {% if 'token' in session %}
-                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-5">My Arts</a>
-                <a href="{{ url_for('logout') }}" class="btn btn-5">Log out</a>
+                <a href="{{ url_for('profile', artist=session['token']) }}" class="btn btn-3">My Arts</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-3">Log out</a>
             {% else %}
-                <a href="{{ url_for('login') }}" class="btn btn-5">Log in</a>
-                <a href="{{ url_for('signup') }}" class="btn btn-5">Sign up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-3">Log in</a>
+                <a href="{{ url_for('signup') }}" class="btn btn-3">Sign up</a>
             {% endif %}
 
             <h3>{{ category }}</h3>
